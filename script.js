@@ -1,7 +1,7 @@
 // Function to show the main content and hide the welcome screen
 function showMainContent() {
     document.getElementById('welcome-screen').style.display = 'none';
-    document.getElementById('main-container').style.display = 'block';
+    document.getElementById('main-container').style.display = 'flex';
 }
 
 // List of phrases for the "No" button to cycle through
