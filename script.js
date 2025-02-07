@@ -71,7 +71,11 @@ function displayCatHeart() {
     // When the cat-heart image is fully loaded, add it to the image container
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
-        // Hide the options container
+var thankYouText = document.createElement('div');
+        thankYouText.id = 'thank-you-text';
+        thankYouText.innerText = 'thank youuu, i love you!';
+        imageContainer.appendChild(thankYouText);
+
         document.getElementById('options').style.display = 'none';
     };
 }
