@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>will you be my valentine?</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
-</head>
 <body>
-    <div id="container">
-        <div id="image-container"></div> <!-- Container for displaying images -->
-        <div id="text-container">
-            <div id="question">will you be my valentine?</div> <!-- Question -->
-            <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Yes</button> <!-- Yes button -->
-                <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
+    <!-- Initial Welcome Screen -->
+    <div id="welcome-screen">
+        <div id="welcome-text">Press OK to view calendar</div>
+        <button id="welcome-button" onclick="showMainContent()">OK</button>
+    </div>
+
+    <!-- Main Valentine Content (Hidden Initially) -->
+    <div id="main-container" style="display: none;">
+        <div id="container">
+            <div id="image-container"></div> <!-- Container for displaying images -->
+            <div id="text-container">
+                <div id="question">will you be my valentine?</div> <!-- Question -->
+                <div id="options">
+                    <button id="yes-button" onclick="selectOption('yes')">Yes</button> <!-- Yes button -->
+                    <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
+                </div>
             </div>
         </div>
     </div>
@@ -22,3 +24,4 @@
     <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
+
