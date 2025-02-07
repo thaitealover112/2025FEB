@@ -10,7 +10,7 @@ function selectOption(option) {
             displayCatHeart(); // Display the cat-heart.gif
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
+        // Change text on the "No" button to "bruh"
         document.getElementById('no-button').innerText = 'bruh'; 
         // Increase font size of "Yes" button
         var yesButton = document.getElementById('yes-button');
