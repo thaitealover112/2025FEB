@@ -38,3 +38,10 @@ button {
     border: none; /* Remove button border */
     cursor: pointer; /* Set cursor to pointer on hover */
 }
+
+#thank-you-text {
+    font-family: 'Sacramento', cursive;
+    font-size: 42px;
+    color: #FB607F;
+    margin-top: 20px;
+}
