@@ -1,6 +1,12 @@
+// Function to show the main content and hide the welcome screen
+function showMainContent() {
+    document.getElementById('welcome-screen').style.display = 'none';
+    document.getElementById('main-container').style.display = 'block';
+}
+
 // List of phrases for the "No" button to cycle through
 var noButtonPhrases = ["bruh", "stop", "bro", "fr", "please", "istg", "i hate u"];
-var phraseIndex = 0; // Track current index of the phrase list
+var phraseIndex = 0;
 
 // Function to handle button click events
 function selectOption(option) {
@@ -8,16 +14,13 @@ function selectOption(option) {
         document.getElementById('question').style.display = 'none'; 
         displayCatHeart(); 
     } else if (option === 'no') {
-        // Change text of the "No" button to the next phrase in the list
         document.getElementById('no-button').innerText = noButtonPhrases[phraseIndex];
 
-        // Increase font size of the "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 1.5; // Increase size by 1.5x
+        var newSize = parseFloat(currentFontSize) * 1.5; 
         yesButton.style.fontSize = newSize + 'px';
 
-        // Move to the next phrase, looping if necessary
         phraseIndex = (phraseIndex + 1) % noButtonPhrases.length;
     } else {
         alert('Invalid option!');
@@ -44,4 +47,5 @@ function displayCatHeart() {
         document.getElementById('options').style.display = 'none';
     };
 }
+
 
