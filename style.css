@@ -45,3 +45,31 @@ button {
     color: #FB607F;
     margin-top: 20px;
 }
+
+/* Welcome Screen Styles */
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+}
+
+#welcome-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#welcome-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
