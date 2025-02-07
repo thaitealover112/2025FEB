@@ -8,15 +8,7 @@ function selectOption(option) {
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
-
-            // Create a new paragraph element for the thank you message
-            var thankYouMessage = document.createElement('p');
-            thankYouMessage.innerText = 'thank youuu i love you!'; // Set the text
-            thankYouMessage.style.fontSize = '24px'; // Optional: Customize the text size
-            thankYouMessage.style.fontWeight = 'bold'; // Optional: Make the text bold
-            thankYouMessage.style.color = 'pink'; // Optional: Set the text color to pink
-            // Append the message to the body or a specific container (e.g., #message-container)
-            document.body.appendChild(thankYouMessage);
+            
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "bruh"
@@ -81,6 +73,10 @@ function displayCatHeart() {
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
         // Hide the options container
+        var thankYouText = document.createElement('div');
+        thankYouText.id = 'thank-you-text';
+        thankYouText.innerText = 'thank youuu, i love you!';
+        imageContainer.appendChild(thankYouText);
         document.getElementById('options').style.display = 'none';
     };
 }
