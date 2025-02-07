@@ -1,25 +1,29 @@
 // script.js
 
+// List of phrases for the "No" button to cycle through
+var noButtonPhrases = ["bruh", "stop", "bro", "fr", "please", "istg", "i hate u"];
+var phraseIndex = 0; // Track current index of the phrase list
+
 // Function to handle button click events
 function selectOption(option) {
-    // Check which option was clicked
     if (option === 'yes') {
-        // Flash rainbow colors
         flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
-            
+            document.getElementById('question').style.display = 'none'; 
+            displayCatHeart(); 
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "bruh"
-        document.getElementById('no-button').innerText = 'bruh'; 
-        // Increase font size of "Yes" button
+        // Change text of the "No" button to the next phrase in the list
+        document.getElementById('no-button').innerText = noButtonPhrases[phraseIndex];
+
+        // Increase font size of the "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
+        var newSize = parseFloat(currentFontSize) * 1.5; // Increase size by 1.5x
         yesButton.style.fontSize = newSize + 'px';
+
+        // Move to the next phrase, looping if necessary
+        phraseIndex = (phraseIndex + 1) % noButtonPhrases.length;
     } else {
-        // If neither "Yes" nor "No" was clicked, show an alert message
         alert('Invalid option!');
     }
 }
