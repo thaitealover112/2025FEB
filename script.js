@@ -8,7 +8,7 @@ var phraseIndex = 0; // Track current index of the phrase list
 function selectOption(option) {
     if (option === 'yes') {
         document.getElementById('question').style.display = 'none'; 
-        displayCatHeart(); 
+        displayCatHeart();
     } else if (option === 'no') {
         // Change text of the "No" button to the next phrase in the list
         document.getElementById('no-button').innerText = noButtonPhrases[phraseIndex];
