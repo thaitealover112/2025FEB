@@ -3,12 +3,14 @@
 <body>
     <!-- Initial Welcome Screen -->
     <div id="welcome-screen">
-        <div id="welcome-text">Press OK to view calendar</div>
-        <button id="welcome-button" onclick="showMainContent()">OK</button>
+        <div id="welcome-content">
+            <div id="welcome-text">Press OK to view calendar</div>
+            <button id="welcome-button" onclick="showMainContent()">OK</button>
+        </div>
     </div>
 
     <!-- Main Valentine Content (Hidden Initially) -->
-    <div id="main-container" style="display: none;">
+    <div id="main-container">
         <div id="container">
             <div id="image-container"></div> <!-- Container for displaying images -->
             <div id="text-container">
